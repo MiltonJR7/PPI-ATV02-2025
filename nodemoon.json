@@ -1,0 +1,6 @@
+{
+  "watch": ["index.js"],
+  "ignore": ["node_modules", "package-lock.json", "*.log"],
+  "delay": "500ms",
+  "ext": "js,json"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "ppi-atv02-2025",
+  "version": "1.0.0",
+  "description": "Processo formulario usando o metodo POST",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiltonJR7/PPI-ATV02-2025.git"
+  },
+  "author": "Milton Junior",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MiltonJR7/PPI-ATV02-2025/issues"
+  },
+  "homepage": "https://github.com/MiltonJR7/PPI-ATV02-2025#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
