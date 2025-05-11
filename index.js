@@ -190,7 +190,7 @@ app.post("/clientes", (requisicao, resposta) => {
     const uf = requisicao.body.uf;
     const cep = requisicao.body.cep;
 
-    if(nome && sobrenome && nomeUsuario && cidade && uf && cep) {
+    if(nome && sobrenome && nomeUsuario && cidade && uf && cep && /^\d{8}$/.test(cep)) {
         listaUsers.push({
             nome: nome,
             sobrenome: sobrenome,
@@ -381,11 +381,11 @@ app.post("/clientes", (requisicao, resposta) => {
     
                                     conteudo = conteudo + `</div>
                                 <div class="col-md-3 position-relative">`;
-                                    if(!cep) {
+                                    if(!cep || !/^\d{8}$/.test(cep)) {
                                         conteudo = conteudo + `
                                             <label for="cep" class="form-label">CEP</label>
                                             <input type="text" class="form-control" id="cep" name="cep" required />
-                                            <span class="text-danger">Por favor informe o CEP!</span>
+                                            <span class="text-danger">Informe um CEP valido!</span>
                                         `
                                     } else {
                                         conteudo = conteudo + `
